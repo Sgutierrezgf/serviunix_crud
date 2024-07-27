@@ -1,5 +1,10 @@
 Pongo aqui los queries que se pedian en el texto
 
+-- Crear la base de datos
+CREATE DATABASE IF NOT EXISTS gestion_empleados;
+USE gestion_empleados;
+
+
 -- Crear la tabla de Departamentos
 CREATE TABLE Departamento (
     id INT AUTO_INCREMENT PRIMARY KEY,
