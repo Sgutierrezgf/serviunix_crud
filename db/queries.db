@@ -1,0 +1,39 @@
+Pongo aqui los queries que se pedian en el texto
+
+-- Crear la tabla de Departamentos
+CREATE TABLE Departamento (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre_departamento VARCHAR(100) NOT NULL
+);
+
+-- Crear la tabla de Géneros
+CREATE TABLE Genero (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(50) NOT NULL
+);
+
+-- Crear la tabla de Empleados
+CREATE TABLE Empleado (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombres VARCHAR(100) NOT NULL,
+    apellidos VARCHAR(100) NOT NULL,
+    salario INT NOT NULL,
+    edad INT NOT NULL,
+    fecha_ingreso DATE NOT NULL,
+    comentarios TEXT,
+    genero_id INT,
+    departamento_id INT,
+    FOREIGN KEY (genero_id) REFERENCES Genero(id),
+    FOREIGN KEY (departamento_id) REFERENCES Departamento(id)
+);
+
+-- Crear la tabla de Gastos
+CREATE TABLE Gasto (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    año YEAR NOT NULL,
+    mes VARCHAR(20) NOT NULL,
+    ingresos DECIMAL(10, 2) NOT NULL,
+    gastos DECIMAL(10, 2) NOT NULL,
+    departamento_id INT,
+    FOREIGN KEY (departamento_id) REFERENCES Departamento(id)
+);

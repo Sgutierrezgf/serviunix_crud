@@ -1,0 +1,24 @@
+Listado de todos los datos de los empleados del departamento “Ti”
+    SELECT e.*
+    FROM Empleado e
+    JOIN Departamento d ON e.departamento_id = d.id
+    WHERE d.nombre_departamento = 'Ti';
+
+Listados de los 3 departamentos que más gastos producen
+    SELECT d.nombre_departamento, SUM(g.gastos) AS total_gastos
+    FROM Gasto g
+    JOIN Departamento d ON g.departamento_id = d.id
+    GROUP BY d.nombre_departamento
+    ORDER BY total_gastos DESC
+    LIMIT 3;
+
+Listado de datos del empleado con mayor salario
+    SELECT *
+    FROM Empleado
+    ORDER BY salario DESC
+    LIMIT 1;
+
+Cantidad de empleados con salarios menor a 1,500.000
+    SELECT COUNT(*)
+    FROM Empleado
+    WHERE salario < 1500.00;
