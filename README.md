@@ -11,10 +11,10 @@ Rutas
 
 ruta inicial 
 
-http://localhost:"puerto que use laragon o tu entorno de desarrollo"/serviunix_crud/
+http://localhost: "puerto que use laragon o tu entorno de desarrollo"/serviunix_crud/
 
 ruta dashboard
 
-http://localhost:"puerto que use laragon o tu entorno de desarrollo"/serviunix_crud/dashboard
+http://localhost :"puerto que use laragon o tu entorno de desarrollo"/serviunix_crud/dashboard
 
 --> ya desde esta es posible moverte a las diferentes rutas existentes
