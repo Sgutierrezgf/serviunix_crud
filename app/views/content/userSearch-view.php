@@ -8,7 +8,7 @@
 
     use app\controllers\userController;
 
-    $insUsuario = new userController();
+    // $insUsuario = new userController();
 
     if (!isset($_SESSION[$url[0]]) && empty($_SESSION[$url[0]])) {
     ?>
